@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+<body>
+    <main>
+        <section class="contenedor-izquierdo">
+            <div class="contenedor-logo">
+                <img src="img/Vector.svg" alt="Logo">
+            </div>
+            <textarea name="textoEntrada" id="textoEntrada" placeholder="Ingrese el texto aquí"></textarea>
+            
+            <div class="contenedor-controles">
+                <p><i class="bi bi-exclamation-circle-fill"></i>Solo letras minusculas y sin acentos</p>
+                <div class="contenedor-btn">
+                    <button id="btn-encriptar" class="btn btn1">Encriptar</button>
+                    <button id="btn-desencriptar" class="btn btn2">Desencriptar</button>
+                </div>
+                <div class="contenedor-texto">
+                    <p>Creado por: <i>Erik David Medina Lopez, ORACLE ONE G5</i></p>
+                </div>
+            </div>
+
+        </section>
+
+        <aside class="contenedor-derecho">
+            <div class="contenedor-img">
+                <img src="img/Muñeco.svg" alt="Buscando">
+            </div>
+            <h2>Ningun mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </aside>
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
