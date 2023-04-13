@@ -5,6 +5,9 @@ const textoSalida = document.getElementById("textoSalida");
 const contenedorSinDatos = document.querySelector(".cont-sin_Datos");
 const contenedorConDatos = document.querySelector(".cont-con_Datos");
 const btnCopy = document.getElementById("copy");
+const cajaLogo = document.querySelector(".contenedor-logo");
+const cajaBtns = document.querySelector(".contenedor-btn");
+const aside = document.querySelector(".contenedor-derecho");
 let textoEncriptado = "";
 let textoDesencriptado = "";
 btnEncriptar.onclick = () => {
@@ -89,3 +92,11 @@ btnCopy.onmouseup = () => {
     btnCopy.classList.remove("click");
 }
 
+window.onload = () => {
+    cajaLogo.classList.remove('start');
+    cajaBtns.classList.remove('start');
+    aside.classList.remove('start');
+    cajaLogo.style.transition="transform .4s ease .4s";
+    cajaBtns.style.transition="transform .6s ease .6s";
+    aside.style.transition="transform 1s ease 1s";
+}

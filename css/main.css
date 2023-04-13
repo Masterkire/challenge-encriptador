@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: .2s linear;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     padding: 40px;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* Lado izquierdo */
@@ -40,6 +42,10 @@ main .contenedor-izquierdo {
 main .contenedor-izquierdo .contenedor-logo {
     margin-bottom: 5rem;
     margin-left: 48px;
+}
+
+main .contenedor-izquierdo .contenedor-logo.start {
+    transform: translateX(-10rem);
 }
 
 main .contenedor-izquierdo textarea {
@@ -83,6 +89,10 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-btn {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+}
+
+main .contenedor-izquierdo .contenedor-controles .contenedor-btn.start {
+    transform: translateY(20rem);
 }
 
 .btn {
@@ -133,6 +143,10 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
     background: #fff;
     display: flex;
     align-items: center;
+}
+
+.contenedor-derecho.start {
+    transform: translateX(50rem);
 }
 
 .contenedor-derecho .cont-sin_Datos {
