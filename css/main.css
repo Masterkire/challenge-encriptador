@@ -2,8 +2,10 @@
 
 :root {
     --blue: #0A3871;
+    --shadow-blue: #0a2646;
     --gris: #495057;
     --light-grey: #D8DFE8;
+    --shadow-light-grey: #969a9e;
 }
 
 * {
@@ -89,6 +91,7 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-btn {
     border-radius: 24px;
     font-size: 1rem;
     border: 1px solid var(--blue);
+    cursor: pointer;
 }
 
 main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn1 {
@@ -96,9 +99,24 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn1 {
     color: #fff;
 }
 
+main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn1:hover,
+main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn2:hover,
+.contenedor-derecho .cont-con_Datos .btn-copiar:hover {
+    border: 3px solid rgb(148, 27, 218);
+}
+
+main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn1.click {
+    box-shadow: inset 2px 2px 40px 5px var(--shadow-blue);
+    transform: scale(.9,.9);
+}
+
 main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn2 {
     background-color: var(--light-grey);
-    color: var(--blue);
+}
+
+main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn2.click {
+    box-shadow: inset 2px 2px 40px 5px var(--shadow-light-grey);
+    transform: scale(.9,.9);
 }
 
 main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
@@ -152,6 +170,11 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
 .contenedor-derecho .cont-con_Datos .btn-copiar {
     width: 100%;
     background-color: #fff;
+}
+
+.contenedor-derecho .cont-con_Datos .btn-copiar.click {
+    box-shadow: inset 2px 2px 40px 5px var(--shadow-light-grey);
+    transform: scale(.9,.9);
 }
 
 .contenedor-derecho .contenedor-img {
