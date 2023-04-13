@@ -25,11 +25,14 @@ body {
 main {
     width: 100%;
     display: flex;
-    align-items: center;
 }
 
 main .contenedor-izquierdo {
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 main .contenedor-izquierdo .contenedor-logo {
@@ -80,8 +83,8 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-btn {
     gap: 24px;
 }
 
-main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn {
-    width: 20.5rem;
+.btn {
+    width: 50%;
     height: 4.18rem;
     border-radius: 24px;
     font-size: 1rem;
@@ -98,14 +101,6 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn2 {
     color: var(--blue);
 }
 
-main .contenedor-izquierdo .contenedor-controles .contenedor-texto {
-    color: var(--gris);
-    opacity: .8;
-    text-align: center;
-    padding: 10px;
-    margin-top: 2rem;
-}
-
 main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
     margin-bottom: 0;
 }
@@ -114,14 +109,49 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
 
 .contenedor-derecho {
     width: 30%;
-    height: 100vh;
+    height: calc(100vh - 120px);
     border-radius: 2rem;
     padding: 2rem;
     background: #fff;
     display: flex;
+    align-items: center;
+}
+
+.contenedor-derecho .cont-sin_Datos {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.contenedor-derecho .cont-sin_Datos.inactive {
+    display: none;
+}
+
+.contenedor-derecho .cont-con_Datos {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.contenedor-derecho .cont-con_Datos.inactive {
+    display: none;
+}
+
+.contenedor-derecho .cont-con_Datos h2 {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--gris);
+}
+
+.contenedor-derecho .cont-con_Datos .btn-copiar {
+    width: 100%;
+    background-color: #fff;
 }
 
 .contenedor-derecho .contenedor-img {
@@ -144,4 +174,115 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
 
 .contenedor-derecho p {
     color: var(--gris);
+}
+
+/* footer */
+
+footer {
+    width: 70%;
+}
+
+footer .contenedor-texto {
+    color: var(--gris);
+    opacity: .8;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+    /* lado izquierdo */
+
+    main {
+        flex-direction: column;
+    }
+
+    main .contenedor-izquierdo {
+        width: 100%;
+    }
+
+    main .contenedor-izquierdo .contenedor-logo {
+        margin-bottom: 5rem;
+        margin-left: 0;
+    }
+
+    main .contenedor-izquierdo textarea {
+        display: block;
+        width: 100%;
+        min-height: 40vh;
+    }
+
+    main .contenedor-izquierdo .contenedor-controles {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    /* lado derecho */
+
+    .contenedor-derecho {
+        width: 100%;
+        height: auto;
+        /* min-height: 30vh; */
+    }
+
+    .contenedor-derecho .contenedor-img {
+        width: 100%;
+        height: 19rem;
+        display: none;
+    }
+    
+    .contenedor-derecho h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    .contenedor-derecho p {
+        color: var(--gris);
+    }
+
+    /* footer */
+
+    footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    main .contenedor-izquierdo textarea {
+        height: auto;
+        min-height: 40vh;
+        margin-bottom: 0;
+    }
+    
+    main .contenedor-izquierdo .contenedor-controles .contenedor-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn1 {
+        background-color: var(--blue);
+        color: #fff;
+    }
+    
+    main .contenedor-izquierdo .contenedor-controles .contenedor-btn .btn2 {
+        background-color: var(--light-grey);
+        color: var(--blue);
+    }
+
+    .btn {
+        width: 100%;
+        height: 4.18rem;
+        border-radius: 24px;
+        font-size: 1rem;
+        border: 1px solid var(--blue);
+    }
 }
