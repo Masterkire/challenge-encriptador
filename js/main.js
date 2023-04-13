@@ -8,6 +8,7 @@ const btnCopy = document.getElementById("copy");
 const cajaLogo = document.querySelector(".contenedor-logo");
 const cajaBtns = document.querySelector(".contenedor-btn");
 const aside = document.querySelector(".contenedor-derecho");
+const aviso = document.querySelector(".aviso");
 let textoEncriptado = "";
 let textoDesencriptado = "";
 btnEncriptar.onclick = () => {
@@ -62,11 +63,23 @@ function copy() {
   textoEntrada.setSelectionRange(0, 99999);
   document.execCommand("copy");
   textoEntrada.value = "";
+  
+  avisoCopiado();
 }
 
 btnCopy.addEventListener("click", copy);
 
 /* efectos */
+
+function avisoCopiado() {
+    aviso.classList.remove("inactive");
+    aviso.classList.add("active");
+    
+    setTimeout(()=>{
+        aviso.classList.add("inactive");
+        aviso.classList.remove("active");
+    },1000);
+}
 
 btnEncriptar.onmousedown = () => {
     btnEncriptar.classList.add("click");

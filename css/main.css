@@ -136,6 +136,7 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
 /* Lado derecho */
 
 .contenedor-derecho {
+    position: relative;
     width: 30%;
     height: calc(100vh - 120px);
     border-radius: 2rem;
@@ -211,6 +212,23 @@ main .contenedor-izquierdo .contenedor-controles .contenedor-texto p {
 
 .contenedor-derecho p {
     color: var(--gris);
+}
+
+.aviso {
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 85px);
+    text-align: center;
+    font-size: 24px;
+}
+
+.aviso i{
+    color: greenyellow;
+    font-size: 32px;
+}
+
+.aviso.inactive {
+    display: none;
 }
 
 /* footer */
